@@ -1,0 +1,162 @@
+@keyframes multiplecolors{
+    0%{
+        color: red;
+    }
+    10%{
+        color: orange;
+    }
+    30%{
+        color: yellow
+    }
+    50%{
+        color: green;
+    }
+    60%{
+        color: blue;
+    }
+    80%{
+        color: indigo;
+    }
+    100%{
+        color: violet;
+    }
+}
+
+@keyframes skeleton{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(1000%);
+    }
+}
+
+header{
+    height: 25vh;
+}
+
+header section{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header section h1{
+    font-size: clamp(2rem, 5rem, 8rem);
+    font-family: cursive;
+}
+
+header section h1 div{
+    display: flex;
+    height: 10px;
+    width: 80%;
+    margin: 1rem auto 0px;
+}
+
+header section h1 div .box{
+    flex: 0 0 25%;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.search-section, .results-section{
+    margin: 2rem 0;
+}
+
+.search-box{
+    width: 65%;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.4);
+    overflow: hidden;
+}
+
+.search-box form{
+    display: flex;
+}
+
+.search-box form input[type="text"]{
+    padding: 1rem 2rem;
+    flex: 0 0 80%;
+    border: none;
+}
+
+.search-box form input[type="text"]:focus{
+    outline: none;
+}
+
+.search-box form button{
+    flex: 1;
+    background-color: transparent;
+    font-size: 10px;
+    text-align: center;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.search-box form button:hover{
+    animation: multiplecolors .5s linear infinite;
+}
+
+
+.grid{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.card{
+    flex: 0 0 30%;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 2px 2px rgba(0,0,0,.4);
+    margin-bottom: 30px;
+}
+
+.card .image, .card .caption.shadow{
+    overflow: hidden;
+    background-color: lightgray; 
+    border-radius: 20px;
+    position: relative;
+}
+
+.card .image{
+    height: 200px;
+}
+
+.card .caption.shadow{
+    height: 20px;
+}
+
+.image.shadow + .caption.shadow{
+    margin-left: 20px;
+}
+
+.shadow::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    background: linear-gradient(to right, transparent, #fff);
+    animation: skeleton 2s ease-in infinite;
+}
+
