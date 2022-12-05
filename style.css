@@ -224,6 +224,13 @@ header section h1 div .box{
     }
 }
 
+
+@media only screen and (max-width: 600px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media only screen and (min-width: 600px){
     .search-box form button{
         font-size: 15px;
@@ -237,5 +244,9 @@ header section h1 div .box{
 
     .search-box{
         width: 250px;
+    }
+
+    .grid{
+        grid-template-columns: 1fr;
     }
 }
