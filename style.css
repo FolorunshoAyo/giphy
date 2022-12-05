@@ -31,6 +31,15 @@
     }
 }
 
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 header{
     height: 25vh;
 }
@@ -87,12 +96,13 @@ header section h1 div .box{
 }
 
 .search-box form{
-    display: flex;
+    width: 100%;
+    position: relative;
 }
 
 .search-box form input[type="text"]{
+    width: 100%;
     padding: 1rem 2rem;
-    flex: 0 0 80%;
     border: none;
 }
 
@@ -101,12 +111,16 @@ header section h1 div .box{
 }
 
 .search-box form button{
-    flex: 1;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 50px;
     background-color: transparent;
-    font-size: 10px;
+    font-size: 1rem;
     text-align: center;
     border: none;
-    font-size: 2rem;
+    font-size: 1rem;
     cursor: pointer;
     padding: 0.5rem;
 }
@@ -115,11 +129,10 @@ header section h1 div .box{
     animation: multiplecolors .5s linear infinite;
 }
 
-
 .grid{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 .card{
@@ -149,6 +162,27 @@ header section h1 div .box{
     margin-left: 20px;
 }
 
+.image-container img{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.display-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-weight: bold;
+    background: linear-gradient(
+            to right, #f32170, #ff6b08,
+             #cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.caption{
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
 .shadow::after{
     content: "";
     position: absolute;
@@ -160,3 +194,48 @@ header section h1 div .box{
     animation: skeleton 2s ease-in infinite;
 }
 
+.spinner{
+    margin: 20px auto;
+    max-width: 5%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 3px solid grey;
+    border-top: 3px solid red;
+    animation: spin 2s linear infinite;
+    display: none;
+}
+
+.spinner.active{
+    display: block;
+}
+
+.grid.preloader{
+    display: none;
+}
+
+.preloader.active{
+    display: grid;
+}
+
+
+@media only screen and (min-width: 1200px){
+    .search-box{
+        width: 700px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .search-box form button{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    header section h1{
+        font-size: 4rem;
+    }
+
+    .search-box{
+        width: 250px;
+    }
+}

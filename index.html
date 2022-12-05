@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <!-- External Link Here -->
     <title>Welcome to Giphy, all your GIF's in one place</title>
 </head>
 
@@ -26,16 +27,16 @@
     <main>
         <section class="search-section">
             <div class="search-box">
-                <form>
-                    <input type="text" id="query-input">
-                    <button id="search-btn">
-                        {}
+                <form id="search-form">
+                    <input type="text" placeholder="Start typing....." id="query-input">
+                    <button type="button" id="search-btn">
+                        <i class="fas fa-search"></i>
                     </button>
                 </form>
             </div>
         </section>
         <section class="results-section">
-            <div class="grid preloader active">
+            <div class="grid preloader">
                 <div class="card">
                     <div class="image shadow"></div>
                     <p class="caption shadow"></p>
@@ -82,70 +83,14 @@
                     <p class="caption shadow"></p>
                 </div>
             </div>
-            <div class="grid results">
-                <div class="card">
-                    <div class="image-container">
-                        <img src="#" alt="Some image" />
-                    </div>
-                    <p class="caption">Some caption</p>
-                </div>
-                <div class="card">
-                    <div class="image-container">
-                        <img src="#" alt="Some image" />
-                    </div>
-                    <p class="caption">Some caption</p>
-                </div>
-                <div class="card">
-                    <div class="image-container">
-                        <img src="#" alt="Some image" />
-                    </div>
-                    <p class="caption">Some caption</p>
-                </div>
-                <div class="card">
-                    <div class="image-container">
-                        <img src="#" alt="Some image" />
-                    </div>
-                    <p class="caption">Some caption</p>
-                </div>
-                <div class="card">
-                    <div class="image-container">
-                        <img src="#" alt="Some image" />
-                    </div>
-                    <p class="caption">Some caption</p>
-                </div>
-                <div class="card">
-                    <div class="image-container">
-                        <img src="#" alt="Some image" />
-                    </div>
-                    <p class="caption">Some caption</p>
-                </div>
-                <div class="card">
-                    <div class="image-container">
-                        <img src="#" alt="Some image" />
-                    </div>
-                    <p class="caption">Some caption</p>
-                </div>
-                <div class="card">
-                    <div class="image-container">
-                        <img src="#" alt="Some image" />
-                    </div>
-                    <p class="caption">Some caption</p>
-                </div>
-                <div class="card">
-                    <div class="image-container">
-                        <img src="#" alt="Some image" />
-                    </div>
-                    <p class="caption">Some caption</p>
-                </div>
-                <div class="card">
-                    <div class="image-container">
-                        <img src="#" alt="Some image" />
-                    </div>
-                    <p class="caption">Some caption</p>
-                </div>
-            </div>
+            <div class="grid results"></div>
+        </section>
+        <section>
+            <div class="spinner"></div>
         </section>
     </main>
+    <!-- FONT AWESOME JIT SCRIPT-->
+    <script src="https://kit.fontawesome.com/3ae896f9ec.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
